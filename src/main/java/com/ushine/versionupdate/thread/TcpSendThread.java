@@ -46,7 +46,7 @@ public class TcpSendThread extends Thread {
 
 
         try (
-                FileInputStream fs = new FileInputStream("E:\\360MoveData\\Users\\Administrator\\Desktop\\tls\\tls.zip");
+                FileInputStream fs = new FileInputStream("E:\\360MoveData\\Users\\Administrator\\Desktop\\tls\\noSql.zip");
                 OutputStream os = socket.getOutputStream()
         ){
 
@@ -54,10 +54,11 @@ public class TcpSendThread extends Thread {
 
             Project project = new Project();
 
-            project.setVersion(0);
+            project.setVersion(1);
            // project.setPath("E:\\360MoveData\\Users\\Administrator\\Desktop\\同步\\tls.zip");
             project.setServerPath("D:\\project");
             project.setNoSql(ProjectConstant.NO_HAVE);
+            project.setPort(9001+"");
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             byte[] data = new byte[1024];
